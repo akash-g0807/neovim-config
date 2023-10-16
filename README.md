@@ -129,6 +129,9 @@ sudo apt install fzf
 > for lldb. I used the one from `mason.nvim`, If this is used, double check the username
 > in the path.
 
+- python-neovim
+  You need to install pynvim or python-neovim using pip or your system package manager
+
 ## Installation
 
 Installation is very simple, copy the repo contents to `~/.config/nvim/`

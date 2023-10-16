@@ -77,6 +77,33 @@ return packer.startup(function(use)
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
+	-- Installation
+	use({ "L3MON4D3/LuaSnip" })
+	use({
+		"hrsh7th/nvim-cmp",
+		config = function()
+			require("cmp").setup({
+				snippet = {
+					expand = function(args)
+						require("luasnip").lsp_expand(args.body)
+					end,
+				},
+
+				sources = {
+					{ name = "luasnip" },
+					-- more sources
+				},
+			})
+		end,
+	})
+	use({ "saadparwaiz1/cmp_luasnip" })
+
+	-- telescope luasnip
+	use({
+		"benfowler/telescope-luasnip.nvim",
+		module = "telescope._extensions.luasnip", -- if you wish to lazy-load
+	})
+
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
 	use("williamboman/mason-lspconfig.nvim") -- bridges gap b/w mason & lspconfig
@@ -201,6 +228,16 @@ return packer.startup(function(use)
 
 	-- Copilot
 	use("github/copilot.vim")
+
+	-- snippets
+	use("honza/vim-snippets")
+
+	-- ultisnips
+	use("SirVer/ultisnips")
+
+	-- cmp nvim ultisnips
+
+	use("quangnguyen30192/cmp-nvim-ultisnips")
 
 	if packer_bootstrap then
 		require("packer").sync()
