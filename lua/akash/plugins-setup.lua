@@ -74,28 +74,11 @@ return packer.startup(function(use)
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
-	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
+	-- use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
 
 	-- Installation
-	use({ "L3MON4D3/LuaSnip" })
-	use({
-		"hrsh7th/nvim-cmp",
-		config = function()
-			require("cmp").setup({
-				snippet = {
-					expand = function(args)
-						require("luasnip").lsp_expand(args.body)
-					end,
-				},
-
-				sources = {
-					{ name = "luasnip" },
-					-- more sources
-				},
-			})
-		end,
-	})
+	-- use({ "L3MON4D3/LuaSnip" })
 	use({ "saadparwaiz1/cmp_luasnip" })
 
 	-- telescope luasnip
