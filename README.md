@@ -132,6 +132,8 @@ sudo apt install fzf
 - python-neovim
   You need to install pynvim or python-neovim using pip or your system package manager
 
+- install sympy
+
 ## Installation
 
 Installation is very simple, copy the repo contents to `~/.config/nvim/`
