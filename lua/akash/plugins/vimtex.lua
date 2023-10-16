@@ -2,7 +2,7 @@
 -- http://manpages.ubuntu.com/manpages/trusty/man5/zathurarc.5.html
 vim.g["vimtex_view_method"] = "zathura"
 --vim.g["vimtex_quickfix_mode"] = 0
-
+vim.opt.conceallevel = 1
 -- Ignore mappings
 -- vim.g["vimtex_mappings_enabled"] = 0
 
