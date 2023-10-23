@@ -21,6 +21,11 @@ if not mason_dap_status then
   return
 end
 
+local mason_tool_installer_status, mason_tool_installer = pcall(require, "mason-tool-installer")
+if not mason_tool_installer_status then
+  return
+end
+
 -- enable mason
 mason.setup()
 
@@ -57,6 +62,21 @@ mason_lspconfig.setup({
 --   -- auto-install configured formatters & linters (with null-ls)
 --   automatic_installation = true,
 -- })
+
+mason_tool_installer.setup({
+  -- list of tools for mason to install
+  ensure_installed = {
+    "prettier",
+    "clang-format",
+    "prettierd",
+    "black",
+    "isort",
+    "latexindent",
+    "stylua",
+    "pylint",
+    "verible",
+  },
+})
 
 mason_dap.setup({
   ensure_installed = {

@@ -227,6 +227,9 @@ return packer.startup(function(use)
   -- linting
   use("mfussenegger/nvim-lint")
 
+  -- mason-tool-installer
+  use("WhoIsSethDaniel/mason-tool-installer.nvim")
+
   if packer_bootstrap then
     require("packer").sync()
   end
