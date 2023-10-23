@@ -102,8 +102,8 @@ return packer.startup(function(use)
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
   -- formatting & linting
-  use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-  use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+  -- use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
+  -- use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
 
   -- treesitter configuration
   use({
@@ -218,6 +218,14 @@ return packer.startup(function(use)
   -- cmp nvim ultisnips
 
   use("quangnguyen30192/cmp-nvim-ultisnips")
+
+  -- conform
+  use({
+    "stevearc/conform.nvim",
+  })
+
+  -- linting
+  use("mfussenegger/nvim-lint")
 
   if packer_bootstrap then
     require("packer").sync()

@@ -11,10 +11,10 @@ if not mason_lspconfig_status then
 end
 
 -- import mason-null-ls plugin safely
-local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
-if not mason_null_ls_status then
-  return
-end
+-- local mason_null_ls_status, mason_null_ls = pcall(require, "mason-null-ls")
+-- if not mason_null_ls_status then
+--   return
+-- end
 
 local mason_dap_status, mason_dap = pcall(require, "mason-nvim-dap")
 if not mason_dap_status then
@@ -43,20 +43,20 @@ mason_lspconfig.setup({
   automatic_installation = true, -- not the same as ensure_installed
 })
 
-mason_null_ls.setup({
-  -- list of formatters & linters for mason to install
-  ensure_installed = {
-    "prettier", -- ts/js formatter
-    "stylua", -- lua formatter
-    "eslint_d", -- ts/js linter
-    "verible",
-    "black",
-    "isort",
-    "clang-format",
-  },
-  -- auto-install configured formatters & linters (with null-ls)
-  automatic_installation = true,
-})
+-- mason_null_ls.setup({
+--   -- list of formatters & linters for mason to install
+--   ensure_installed = {
+--     "prettier", -- ts/js formatter
+--     "stylua", -- lua formatter
+--     "eslint_d", -- ts/js linter
+--     "verible",
+--     "black",
+--     "isort",
+--     "clang-format",
+--   },
+--   -- auto-install configured formatters & linters (with null-ls)
+--   automatic_installation = true,
+-- })
 
 mason_dap.setup({
   ensure_installed = {

@@ -45,6 +45,11 @@ I chose to use `ccls` over `clangd` for my C/C++ LSP as it works with PlatformIO
 ```bash
 sudo apt install ccls
 ```
+- clang-format
+
+```bash
+sudo apt install clang-format
+```
 
 - **Verilator**
 
@@ -133,6 +138,8 @@ sudo apt install fzf
   You need to install pynvim or python-neovim using pip or your system package manager
 
 - install sympy
+
+- post install install all formatting using mason
 
 ## Installation
 
