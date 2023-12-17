@@ -25,6 +25,10 @@ Install python-lsp-server:
 ```bash
 sudo apt install python3-pylsp
 ```
+```bash
+sudo apt install pyright
+
+```
 
 - **`nodejs` and `npm`**
 
